@@ -33,15 +33,15 @@ jobs:
         uses: actions/configure-pages@v4
       
       - name: Install dependencies
-        run: npm install
+        run: cd docs-source && npm install
       
       - name: Build
-        run: npm run build
+        run: cd docs-source && npm run docs:build
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs-source/.vitepress/dist
+          path: docs-source/docs/.vitepress/dist
 
   deploy:
     environment:
