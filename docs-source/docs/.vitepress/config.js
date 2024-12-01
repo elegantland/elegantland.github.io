@@ -2,7 +2,7 @@ export default {
   title: 'QQ Message Blocker',
   description: '优雅而强大的QQ消息屏蔽插件',
   lang: 'zh-CN',
-  base: '/message_blocker/',
+  base: '/',
   head: [
     ['link', { rel: 'icon', type: 'image/jpeg', href: '/favicon.jpg' }],
     ['script', { defer: true, src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "502c5cf94c254180bc1697deff9ee56a"}' }]
