@@ -1,0 +1,53 @@
+/* 重置所有相关的默认样式 */
+:root {
+  --vp-home-hero-name-color: transparent;
+}
+
+/* 主标题渐变效果 - 亮色主题 */
+html:not(.dark) .VPHero .main h1 {
+  background: linear-gradient(
+    45deg,
+    #4A00E0,    /* 深紫色 */
+    #8E2DE2,    /* 中紫色 */
+    #B100CD,    /* 亮紫色 */
+    #D100B1     /* 粉紫色 */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* 主标题渐变效果 - 暗色主题 */
+html.dark .VPHero .main h1 {
+  background: linear-gradient(
+    45deg,
+    #7B66FF,    /* 亮紫色 */
+    #9C7EFF,    /* 中紫色 */
+    #BE95FF,    /* 浅紫色 */
+    #E0B0FF     /* 最浅的紫色 */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 700;
+}
+
+.VPFooter {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.VPFooter .message {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--vp-c-text-2);
+}
+
+.VPFooter .copyright {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+}

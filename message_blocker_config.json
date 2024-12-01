@@ -1,0 +1,52 @@
+{
+  "blockedWords": [
+    "测试111"
+  ],
+  "exactBlockedWords": [
+    "测试222",
+    "6",
+    "？",
+    "测试2222"
+  ],
+  "specialBlockedUsers": {
+    "AL_1S": [
+      "",
+      "@",
+      "您",
+      "其他bot"
+    ],
+    "幻想": [
+      ""
+    ],
+    "儒雅": [
+      "测试333"
+    ]
+  },
+  "exactSpecialBlockedUsers": {
+    "儒雅": [
+      "测试444"
+    ],
+    "儒雅1": [
+      "测试555"
+    ]
+  },
+  "blockedEmojis": [
+    99999,
+    88888
+  ],
+  "specialBlockedUsersEmojis": {
+    "儒雅": [
+      99999,
+      66666
+    ],
+    "儒雅1": [
+      55555
+    ]
+  },
+  "blockedImages": [
+    "76264f7279cd8e5e2d2c597fa68da8a2.jpg",
+    "99205df846cac4d7d680997a0ed56a88.jpg",
+    "bae9b15fd28f626c6b08d01188dfb604.gif"
+  ],
+  "blockSuperEmoji": true
+}
