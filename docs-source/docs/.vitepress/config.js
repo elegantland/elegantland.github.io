@@ -5,7 +5,14 @@ export default {
   base: '/',
   head: [
     ['link', { rel: 'icon', type: 'image/jpeg', href: '/favicon.jpg' }],
-    ['script', { defer: true, src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "502c5cf94c254180bc1697deff9ee56a"}' }]
+    // Google Analytics
+    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-NN6YTPJW8E' }],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NN6YTPJW8E');
+    `]
   ],
   themeConfig: {
     nav: [
