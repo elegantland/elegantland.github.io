@@ -23,7 +23,14 @@ export default defineConfig({
   cleanUrls: true,
   ignoreDeadLinks: true,
 
+  appearance: true, // 启用暗色模式切换
+  
+  // 主题配置
   themeConfig: {
+    logo: '/favicon.jpg',
+    siteTitle: 'QQ Message Blocker',
+    
+    // 导航栏
     nav: [
       { text: '主页', link: '/' },
       { text: '使用手册', link: '/introduction' },
@@ -32,6 +39,8 @@ export default defineConfig({
         link: 'https://github.com/elegantland/qqMessageBlocker'
       }
     ],
+
+    // 侧边栏
     sidebar: {
       '/': [
         {
@@ -58,12 +67,28 @@ export default defineConfig({
         }
       ]
     },
+
+    // 社交链接
     socialLinks: [
       { icon: 'github', link: 'https://github.com/elegantland/qqMessageBlocker' }
     ],
+
+    // 页脚
     footer: {
       message: '基于 GPL v3 许可发布',
       copyright: 'Copyright 2024 elegantland'
+    },
+
+    // 主题外观
+    appearance: {
+      maxWidth: '1440px',
+      accentColor: '#3eaf7c'
+    },
+
+    // 移动端配置
+    outline: {
+      level: [2, 3],
+      label: '目录'
     }
   }
 })
