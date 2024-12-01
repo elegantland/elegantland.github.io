@@ -1,0 +1,17 @@
+.gradient-title {
+  background: linear-gradient(90deg, #40b3ff 0%, #8080ff 50%, #c840ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.gradient-subtitle {
+  font-size: 2rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}

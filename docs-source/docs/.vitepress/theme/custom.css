@@ -35,6 +35,33 @@ html.dark .VPHero .main h1 {
   font-weight: 700;
 }
 
+.VPHome {
+  padding-bottom: 0 !important;
+}
+
+.VPHero {
+  margin-top: 2rem;
+}
+
+.VPHero .name,
+.VPHero .text {
+  background: linear-gradient(90deg, #40b3ff 0%, #8080ff 50%, #c840ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  font-size: 4rem !important;
+  font-weight: bold;
+}
+
+.VPHero .text {
+  font-size: 2.5rem !important;
+}
+
+.VPHero .tagline {
+  font-size: 1.5rem !important;
+  color: #666 !important;
+}
+
 .VPFooter {
   text-align: center;
   padding: 1rem;
