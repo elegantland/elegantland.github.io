@@ -32,11 +32,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
-      - name: Install dependencies
-        run: cd docs-source && npm install
+      - name: Clean and Install dependencies
+        run: |
+          cd docs-source
+          npm cache clean --force
+          rm -rf node_modules package-lock.json
+          npm install
       
       - name: Build
-        run: cd docs-source && npm run docs:build
+        run: |
+          cd docs-source
+          npm run docs:build
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
