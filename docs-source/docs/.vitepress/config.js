@@ -14,7 +14,65 @@ export default defineConfig({
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-NN6YTPJW8E');
+      
+      // 启用更详细的用户数据收集
+      gtag('config', 'G-NN6YTPJW8E', {
+        send_page_view: true,
+        cookie_flags: 'max-age=7200;secure;samesite=none',
+        allow_google_signals: true,
+        allow_ad_personalization_signals: true,
+        anonymize_ip: false,
+        client_storage: 'none',
+        transport_type: 'beacon',
+        page_title: document.title,
+        page_location: window.location.href,
+        user_properties: {
+          user_agent: navigator.userAgent,
+          language: navigator.language,
+          screen_resolution: \`\${window.screen.width}x\${window.screen.height}\`,
+          viewport_size: \`\${window.innerWidth}x\${window.innerHeight}\`
+        }
+      });
+
+      // 自定义事件跟踪
+      document.addEventListener('DOMContentLoaded', function() {
+        // 跟踪页面停留时间
+        let startTime = new Date();
+        window.addEventListener('beforeunload', function() {
+          let endTime = new Date();
+          let timeSpent = (endTime - startTime) / 1000;
+          gtag('event', 'time_spent', {
+            'event_category': 'User Engagement',
+            'event_label': document.title,
+            'value': timeSpent
+          });
+        });
+
+        // 跟踪滚动深度
+        let maxScroll = 0;
+        window.addEventListener('scroll', function() {
+          let scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+          if (scrollPercent > maxScroll) {
+            maxScroll = scrollPercent;
+            if (maxScroll > 25 && maxScroll <= 100) {
+              gtag('event', 'scroll_depth', {
+                'event_category': 'User Engagement',
+                'event_label': \`\${Math.floor(maxScroll)}%\`
+              });
+            }
+          }
+        });
+
+        // 跟踪外部链接点击
+        document.querySelectorAll('a[href^="http"]').forEach(link => {
+          link.addEventListener('click', function(e) {
+            gtag('event', 'click', {
+              'event_category': 'Outbound Link',
+              'event_label': this.href
+            });
+          });
+        });
+      });
     `]
   ],
 
@@ -25,7 +83,6 @@ export default defineConfig({
 
   appearance: true, // 启用暗色模式切换
   
-  // 主题配置
   themeConfig: {
     logo: '/favicon.jpg',
     siteTitle: 'QQ Message Blocker',
