@@ -8,24 +8,8 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', type: 'image/jpeg', href: '/favicon.jpg' }],
-    // Google Analytics
-    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-NN6YTPJW8E' }],
-    ['script', {}, `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-NN6YTPJW8E');
-    `],
     // 百度统计
-    ['script', {}, `
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?1ba54b56101b5be35d6e750c6ed363c8";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-    `]
+    ['script', { async: true, src: 'https://hm.baidu.com/hm.js?1ba54b56101b5be35d6e750c6ed363c8' }]
   ],
 
   lastUpdated: true,
