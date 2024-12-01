@@ -33,15 +33,15 @@ jobs:
         uses: actions/configure-pages@v4
       
       - name: Install dependencies
-        run: cd docs-source && npm install
+        run: npm install
       
       - name: Build
-        run: cd docs-source && npm run docs:build
+        run: npm run build
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs-source/docs/.vitepress/dist
+          path: docs-source/.vitepress/dist
 
   deploy:
     environment:
@@ -49,7 +49,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
