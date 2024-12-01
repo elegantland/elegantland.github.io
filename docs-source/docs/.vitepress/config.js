@@ -9,7 +9,15 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/jpeg', href: '/favicon.jpg' }],
     // 百度统计
-    ['script', { async: true, src: 'https://hm.baidu.com/hm.js?1ba54b56101b5be35d6e750c6ed363c8' }]
+    ['script', {}, `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1ba54b56101b5be35d6e750c6ed363c8";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    `]
   ],
 
   lastUpdated: true,

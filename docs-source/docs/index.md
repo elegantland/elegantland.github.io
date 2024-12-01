@@ -14,7 +14,7 @@ hero:
       link: /guide/
     - theme: alt
       text: 在GitHub上查看
-      link: https://github.com/elegantland/message_blocker
+      link: https://github.com/elegantland/qqMessageBlocker
 
 features:
   - icon: 🎯
