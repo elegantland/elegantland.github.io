@@ -19,98 +19,48 @@ exactBlockedWords: [
 ]
 ```
 
+详细说明请参考[消息屏蔽](./features/message-blocking.md)。
+
 ### 2. 表情屏蔽
 
 ```javascript
-// 全局表情屏蔽
+// 屏蔽指定表情
 blockedEmojis: [
-    99999,  // 屏蔽表情ID为99999的表情
-    88888   // 可以同时屏蔽多个表情
-]
-
-// 开启超级表情屏蔽
-blockSuperEmoji: true  // 屏蔽所有超级表情
-```
-
-### 3. 图片屏蔽
-
-```javascript
-// 按图片特征值屏蔽
-blockedImages: [
-    "76264f7279cd8e5e2d2c597fa68da8a2.jpg",
-    "bae9b15fd28f626c6b08d01188dfb604.gif"
+    "[表情名称]"
 ]
 ```
 
-## 用户特定规则
+详细说明请参考[表情屏蔽](./features/emoji-blocking.md)。
 
-### 1. 用户消息屏蔽
-
-```javascript
-// 针对特定用户的包含匹配
-specialBlockedUsers: {
-    "用户1": [
-        "",        // 屏蔽该用户的所有消息
-        "@",       // 屏蔽包含"@"的消息
-        "关键词"   // 屏蔽包含特定关键词的消息
-    ]
-}
-
-// 针对特定用户的完全匹配
-exactSpecialBlockedUsers: {
-    "用户1": [
-        "测试444"  // 只屏蔽该用户发送的"测试444"消息
-    ]
-}
-```
-
-### 2. 用户表情屏蔽
+### 3. 用户屏蔽
 
 ```javascript
-// 针对特定用户屏蔽表情
-specialBlockedUsersEmojis: {
-    "用户1": [
-        99999,  // 屏蔽该用户的特定表情
-        66666
-    ]
-}
+// 屏蔽指定用户的所有消息
+blockedUsers: [
+    "QQ号或群名片"
+]
 ```
 
-## 配置管理
+详细说明请参考[用户屏蔽](./features/user-blocking.md)。
 
-### 1. 导出配置
-- 将当前配置导出为 JSON 文件备份
-- 包含所有屏蔽规则和设置
+## 高级功能
 
-### 2. 导入配置
-- 从 JSON 文件导入配置
-- 自动合并现有规则
+### 1. 配置导入导出
 
-### 3. 配置自动加载
-- QQ 重启后自动加载配置
-- 规则修改后即时生效
+为了方便配置的备份和迁移，插件支持配置的导入导出功能。
 
-## 使用建议
+详细说明请参考[配置导入导出](./advanced/config.md)。
 
-### 1. 从简单开始
-- 先使用基础的关键词屏蔽
-- 逐步添加表情和图片屏蔽
-- 根据需要设置用户特定规则
+### 2. 自定义规则
 
-### 2. 规则管理
-- 定期清理无用规则
-- 保持规则列表整洁
-- 及时更新过期规则
+插件支持自定义复杂的屏蔽规则，以满足特定的屏蔽需求。
 
-### 3. 配置维护
-- 定期备份配置文件
-- 谨慎导入未知配置
-- 保持配置文件整洁
+详细说明请参考[自定义规则](./advanced/rules.md)。
 
 ## 下一步
 
-1. 阅读[消息屏蔽](/features/message-blocking)了解更多屏蔽功能
-2. 探索[表情屏蔽](/features/emoji-blocking)的高级用法
-3. 学习[用户屏蔽](/features/user-blocking)的完整功能
-4. 查看[配置导入导出](/advanced/config)深入了解配置管理
-5. 研究[自定义规则](/advanced/rules)创建更复杂的规则
+1. 阅读[消息屏蔽](./features/message-blocking.md)了解更多屏蔽功能
+2. 探索[表情屏蔽](./features/emoji-blocking.md)的高级用法
+3. 学习[用户屏蔽](./features/user-blocking.md)的完整功能
+4. 查看[配置导入导出](./advanced/config.md)深入了解配置管理
+5. 研究[自定义规则](./advanced/rules.md)创建更复杂的规则

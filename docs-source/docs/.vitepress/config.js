@@ -10,7 +10,7 @@ export default {
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: '使用手册', link: '/introduction' },
+      { text: '使用手册', link: '/introduction.md' },
       { 
         text: 'GitHub',
         link: 'https://github.com/elegantland/qqMessageBlocker'
@@ -21,23 +21,23 @@ export default {
         {
           text: '入门',
           items: [
-            { text: '简介', link: '/introduction' },
-            { text: '快速开始', link: '/getting-started' }
+            { text: '简介', link: '/introduction.md' },
+            { text: '快速开始', link: '/getting-started.md' }
           ]
         },
         {
           text: '核心功能',
           items: [
-            { text: '消息屏蔽', link: '/features/message-blocking' },
-            { text: '表情屏蔽', link: '/features/emoji-blocking' },
-            { text: '用户屏蔽', link: '/features/user-blocking' }
+            { text: '消息屏蔽', link: '/features/message-blocking.md' },
+            { text: '表情屏蔽', link: '/features/emoji-blocking.md' },
+            { text: '用户屏蔽', link: '/features/user-blocking.md' }
           ]
         },
         {
           text: '高级功能',
           items: [
-            { text: '配置导入导出', link: '/advanced/config' },
-            { text: '自定义规则', link: '/advanced/rules' },
+            { text: '配置导入导出', link: '/advanced/config.md' },
+            { text: '自定义规则', link: '/advanced/rules.md' },
           ]
         }
       ]
