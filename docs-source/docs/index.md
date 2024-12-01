@@ -6,12 +6,12 @@ hero:
   text: "QQ消息屏蔽插件"
   tagline: "儒雅且简洁"
   image:
-    src: /message_blocker/favicon.jpg
+    src: /favicon.jpg
     alt: QQ Message Blocker
   actions:
     - theme: brand
       text: 快速开始
-      link: /message_blocker/guide/
+      link: /guide/
     - theme: alt
       text: 在GitHub上查看
       link: https://github.com/elegantland/message_blocker
