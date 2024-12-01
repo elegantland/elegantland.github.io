@@ -7,32 +7,31 @@
 }
 
 /* 桌面端优化 */
-@media (min-width: 720px) {
-  .VPHero .text {
-    font-size: 1.1rem !important;
-    max-width: 48rem !important;
-    letter-spacing: 0.5px !important;
-    line-height: 1.7 !important;
-  }
-
+@media (min-width: 960px) {
   .VPFeatures .container {
+    max-width: 1152px !important;
+    margin: 0 auto !important;
     padding: 0 24px !important;
   }
 
   .VPFeatures .items {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 20px !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
     padding: 24px 0 !important;
   }
 
   .VPFeature {
-    height: 100% !important;
-    padding: 24px !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 32px !important;
     border-radius: 12px !important;
     background: var(--vp-c-bg-soft) !important;
     transition: all 0.3s ease !important;
     margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
 
   .VPFeature:hover {
@@ -42,24 +41,42 @@
 
   .VPFeature .title {
     font-size: 1.4rem !important;
-    margin-bottom: 12px !important;
+    margin: 16px 0 12px !important;
     color: var(--vp-c-text-1) !important;
+    font-weight: 600 !important;
   }
 
   .VPFeature .details {
     font-size: 1.1rem !important;
     line-height: 1.6 !important;
     color: var(--vp-c-text-2) !important;
+    margin: 0 !important;
   }
 
   .VPFeature .icon {
     font-size: 2rem !important;
-    margin-bottom: 16px !important;
+    margin: 0 !important;
+  }
+}
+
+/* 平板端优化 */
+@media (min-width: 640px) and (max-width: 959px) {
+  .VPFeatures .items {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+
+  .VPFeature {
+    padding: 24px !important;
+    border-radius: 12px !important;
+    background: var(--vp-c-bg-soft) !important;
   }
 }
 
 /* 移动端优化 */
-@media (max-width: 719px) {
+@media (max-width: 639px) {
   .VPHero {
     padding: 40px 20px !important;
   }
