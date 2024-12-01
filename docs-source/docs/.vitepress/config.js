@@ -44,7 +44,7 @@ export default {
           text: '高级功能',
           items: [
             { text: '配置导入导出', link: '/advanced/config.md' },
-            { text: '自定义规则', link: '/advanced/rules.md' },
+            { text: '自定义规则', link: '/advanced/rules.md' }
           ]
         }
       ]
