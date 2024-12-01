@@ -1,0 +1,14 @@
+{
+  "name": "message-blocker-docs",
+  "version": "1.0.0",
+  "description": "Message Blocker Documentation",
+  "scripts": {
+    "dev": "vitepress dev docs-source",
+    "build": "vitepress build docs-source",
+    "preview": "vitepress preview docs-source"
+  },
+  "dependencies": {
+    "vitepress": "^1.0.0-rc.31",
+    "vue": "^3.3.8"
+  }
+}
