@@ -7,18 +7,19 @@ export default defineConfig({
   base: '/',
 
   head: [
+    // 设置网站图标
     ['link', { rel: 'icon', type: 'image/jpeg', href: '/favicon.jpg' }],
-    // 百度统计
+
+    // 插入 Google Analytics 脚本
+    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-NN6YTPJW8E' }],
     ['script', {}, `
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?1ba54b56101b5be35d6e750c6ed363c8";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-    `]
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NN6YTPJW8E');
+    `],
   ],
+};
 
   lastUpdated: true,
   cleanUrls: true,
