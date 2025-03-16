@@ -19,7 +19,6 @@ export default defineConfig({
       gtag('config', 'G-NN6YTPJW8E');
     `],
   ],
-};
 
   lastUpdated: true,
   cleanUrls: true,
